@@ -1,0 +1,36 @@
+
+.main-heading{
+    color: #000;
+    text-align: center;
+}
+.search-form {
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 53%)
+}
+
+.form-row {
+  margin-bottom: 10px;
+}
+.mat-form-field {
+    padding: 0 10px;
+    width: 209px;
+    border-radius: 10px;
+}
+
+/* .form-field {
+  width: 100%;
+} */
+
+/* .search-button {
+  width: 100%;
+  margin-top: 20px;
+} */
+
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}

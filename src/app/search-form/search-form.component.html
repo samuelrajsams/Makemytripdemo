@@ -1,0 +1,62 @@
+<div class="container">
+    <div style="padding: 20px 0px;">
+        <h1 class="main-heading">Flight Booking</h1>
+    </div>
+    <div>
+        <form class="search-form" fxLayout="column" fxLayoutAlign="start start">
+            <div fxLayout="row" fxLayoutGap="10px" class="form-row">
+    <mat-radio-group aria-label="Select an option" style="padding: 0px 10px;">
+    <mat-label>Trip Type: </mat-label>
+  <mat-radio-button value="1">One Way</mat-radio-button>
+  <mat-radio-button value="2">Round Trip</mat-radio-button>
+</mat-radio-group>
+</div>
+
+  <div fxLayout="row" fxLayoutGap="10px" class="form-row">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>From</mat-label>
+      <input matInput placeholder="Origin">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>To</mat-label>
+      <input matInput placeholder="Destination">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Departure Date</mat-label>
+      <input matInput [matDatepicker]="picker1" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+       <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Return Date</mat-label>
+      <input matInput [matDatepicker]="picker2" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+     <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Travellers</mat-label>
+      <input matInput type="number" placeholder="Number of Travellers">
+    </mat-form-field>
+
+     <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Class</mat-label>
+      <mat-select>
+        <mat-option value="economy">Economy</mat-option>
+        <mat-option value="business">Business</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row" class="form-row" style="text-align: right; padding: 0 10px;">
+    <button mat-raised-button color="primary" class="search-button">Search Flights</button>
+  </div>
+
+  
+</form>
+    </div>
+</div>
+
+
