@@ -1,19 +1,23 @@
 <div class="container">
-    <mat-card>
+ <mat-card class="search-result-card" *ngFor="let flight of flights">
   <mat-card-header>
-    <mat-card-title>Flight Search Results</mat-card-title>
+    <div mat-card-avatar class="airline-logo" style="padding-top: 15px;">
+      <!-- You can replace this with the actual airline logo -->
+      <!-- <img src="assets/airline-logo.png" alt="Airline Logo"> -->
+      <i class="fa fa-plane fa-2x" aria-hidden="true" style="color: #3f51b5;"></i>
+    </div>
+    <mat-card-title>{{ flight.airline }}</mat-card-title>
+    <mat-card-subtitle>{{ flight.origin }} to {{ flight.destination }}</mat-card-subtitle>
   </mat-card-header>
+  <mat-divider></mat-divider>
   <mat-card-content>
-    <!-- Display flight search results here -->
-    <!-- For example: -->
-    <mat-list>
-      <mat-list-item *ngFor="let flight of flights">
-        <h3 mat-line>{{ flight.origin }} to {{ flight.destination }}</h3>
-        <p mat-line>Price: {{ flight.price }}</p>
-        <p mat-line>Departure: {{ flight.departure }}</p>
-        <p mat-line>Arrival: {{ flight.arrival }}</p>
-      </mat-list-item>
-    </mat-list>
+    <p>Departure: {{ flight.departure }} - Arrival: {{ flight.arrival }}</p>
+    <p>Duration: {{ flight.duration }}</p>
+    <p>Price: {{ flight.price }}</p>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" class="search-button">Book Now</button>
+  </mat-card-actions>
 </mat-card>
+
 </div>

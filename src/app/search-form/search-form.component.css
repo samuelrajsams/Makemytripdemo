@@ -1,7 +1,24 @@
 
 .main-heading{
     color: #000;
-    text-align: center;
+    text-decoration: none;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-content {
+  justify-content: space-between;
+}
+.header-card {
+   margin: 0% 25%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 53%);
+    padding: 20px 0px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    bottom: -40px;
+    border-radius: 8px;
 }
 .search-form {
   max-width: 100%;
@@ -20,17 +37,6 @@
     width: 209px;
     border-radius: 10px;
 }
-
-/* .form-field {
-  width: 100%;
-} */
-
-/* .search-button {
-  width: 100%;
-  margin-top: 20px;
-} */
-
-
 .mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;
 }
